@@ -221,4 +221,7 @@ footer p {
   .navbar ul {
     flex-direction: column;
   }
+  .navbar ul li ul.dropdown_menu{
+    position: relative;
+  }
 }
