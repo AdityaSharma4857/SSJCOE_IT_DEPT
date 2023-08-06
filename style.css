@@ -162,7 +162,7 @@ a {
   opacity: 0;
   pointer-events: none;
   z-index: 1;
-  width: 200px;
+  min-width: 200px;
 }
 
 .navbar ul li ul.dropdown_menu li {
