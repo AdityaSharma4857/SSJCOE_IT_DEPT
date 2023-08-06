@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #17375D;
+  --primary-color-light: #185095;
+  --accent-color: #EB7511;
+  --accent-color-dark: #d16200;
+  --black: #111;
+  --white: #fff;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.header {
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.top_header {
+  padding-block: .75rem;
+  background-color: #eee;
+}
+
+.top_header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top_header .container .contact_details,
+.top_header_btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.top_header .container .contact_details a,
+.top_header_btns a {
+  font-size: clamp(0.75rem, 1vw, 1rem);
+  font-weight: 500;
+}
+
+.top_header .container .contact_details a:hover,
+.top_header_btns a:hover {
+  text-decoration: underline;
+}
+
+.top_header .top_header_btns a {
+  display: block;
+}
+
+.main_header {
+  /* background-color: #7ffc3b; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+
+.main_header .header_text a {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  justify-content: center;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.main_header .header_text .dept_name {
+  font-size: clamp(0.8rem, 2.5vw, 1.5rem);
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.main_header .header_text .college_name {
+  font-size: clamp(0.7rem, 2.5vw, 1.1rem);
+  font-weight: 700;
+}
+
+.main_header .header_text .college_address {
+  font-size: clamp(0.5rem, 1.5vw, 0.9rem);
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.navbar {
+  background-color: var(--primary-color);
+}
+
+.navbar ul {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--white);
+  padding: 15px 30px;
+  transition: all .3s ease-in-out;
+  font-weight: 500;
+}
+
+.navbar ul li a:hover {
+  background-color: var(--primary-color-light);
+}
+
+.navbar ul li a.active {
+  background-color: var(--accent-color);
+}
+
+.navbar ul li.dropdown_btn {
+  position: relative;
+}
+
+.navbar ul li.dropdown_btn:hover ul.dropdown_menu {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.navbar ul li ul.dropdown_menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--accent-color);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  width: 200px;
+}
+
+.navbar ul li ul.dropdown_menu li {
+  width: 100%;
+}
+
+.navbar ul li ul.dropdown_menu li a {
+  display: flex;
+  width: 100%;
+}
+
+.navbar ul li ul.dropdown_menu li a:hover {
+  background-color: var(--accent-color-dark);
+}
+
+main {
+  min-height: 100vh;
+}
+
+main .hero_section {
+  position: relative;
+  max-width: 100%;
+  min-height: 500px;
+  background-image: url('images/clg_img.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .hero_section .container {
+  display: flex;
+  align-items: center;
+  min-height: 500px;
+}
+
+main .hero_section h1 {
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  color: var(--white);
+}
+
+main .about_section {
+  margin-block: 4rem;
+}
+
+footer {
+  background-color: var(--primary-color);
+  padding: 20px;
+}
+
+footer p {
+  text-align: center;
+  color: var(--white);
+}
+
+
+@media screen and (max-width: 991px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+}
